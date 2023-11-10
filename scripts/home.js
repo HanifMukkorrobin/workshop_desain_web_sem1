@@ -62,3 +62,101 @@ Highcharts.chart("chartStatistikKonten", {
   ],
 });
 
+var activeContent = 1;
+var bunchOfContent = [
+  {
+    id: 1,
+    judul: 'Siaran Pers Tentang Menkominfo: Pemerintah Terus Berantas Judi Online',
+    tanggal: '13/10/2023',
+    jenis: 'Siaran Pers',
+    image: 'content_4.png'
+  },
+  {
+    id: 2,
+    judul: 'Siaran Pers Tentang Sukseskan MotoGP 2023, Kominfo Beri Dukungan Penuh',
+    tanggal: '13/10/2023',
+    jenis: 'Siaran Pers',
+    image: 'content_5.png'
+  },
+  {
+    id: 3,
+    judul: 'Siaran Pers Tentang Wamenkominfo: Kolaborasi dan Sinergi Jadi Kunci Penerapan SPBE',
+    tanggal: '13/10/2023',
+    jenis: 'Siaran Pers',
+    image: 'content_6.png'
+  },
+  {
+    id: 4,
+    judul: 'Siaran Pers Tentang Menkominfo: Pemerintah Terus Berantas Judi Online',
+    tanggal: '13/10/2023',
+    jenis: 'Siaran Pers',
+    image: 'content_4.png'
+  },
+  {
+    id: 5,
+    judul: 'Siaran Pers Tentang Sukseskan MotoGP 2023, Kominfo Beri Dukungan Penuh',
+    tanggal: '13/10/2023',
+    jenis: 'Siaran Pers',
+    image: 'content_5.png'
+  },
+  {
+    id: 6,
+    judul: 'Siaran Pers Tentang Wamenkominfo: Kolaborasi dan Sinergi Jadi Kunci Penerapan SPBE',
+    tanggal: '13/10/2023',
+    jenis: 'Siaran Pers',
+    image: 'content_6.png'
+  },
+]
+function loadContent(){
+  const parent = document.getElementById('content-siaran-id');
+  bunchOfContent.forEach(element => {
+    const newDiv = document.createElement('div');
+    newDiv.innerHTML = `
+      <div class="content-siaran me-3" id="content-siaran-${element.id}">
+        <div class="content-siaran-text py-4 px-3">
+          <div class="d-flex align-items-center">
+            <div
+              class="p-1 bg-white main-text-color rounded jakarta-semibold font-12"
+            >
+              ${element.jenis}
+            </div>
+            <div class="text-white font-12 jakarta-semibold ms-3">
+              ${element.tanggal}
+            </div>
+          </div>
+          <div class="mt-2 text-white font-16 jakarta-bold">
+            ${element.judul}
+          </div>
+        </div>
+      </div>`;
+    parent.appendChild(newDiv);
+
+    const elementContent = document.getElementById(`content-siaran-${element.id}`);
+    elementContent.addEventListener('click', () => {
+      window.location.href = 'detailBerita.html';
+    })
+    elementContent.style.backgroundImage = `url('../assets/images/${element.image}')`;
+  });
+}
+
+window.addEventListener('load', loadContent);
+
+var scroll = 0;
+function prevSiaran() {
+  console.log('prev');
+  const content = document.getElementById(`content-container`);
+  content.scrollTo({
+    left: content.scrollLeft - 520,
+    behavior: "smooth",
+  });
+  console.log(content.scrollLeft);
+}
+
+function nextSiaran () {
+  const content = document.getElementById(`content-container`);
+  content.scrollTo({
+    left: content.scrollLeft + 520,
+    behavior: "smooth",
+  });
+  console.log(content.scrollLeft);
+}

@@ -39,6 +39,7 @@ body::-webkit-scrollbar {
 .content-siaran{
   width: 504px !important;
   height: 323px !important;
+  padding-top: 37%;
   background-image: url('../assets/images/content_4.png');
   background-repeat: no-repeat;
   background-size: cover;
@@ -46,8 +47,6 @@ body::-webkit-scrollbar {
   border-radius: 8px;
 }
 .content-siaran-text{
-  height: 40%;
-  margin-top: 38%;
   background-color: rgba(0, 0, 0, 0.5);
   border-bottom-right-radius: 8px;
   border-bottom-left-radius: 8px;
@@ -82,4 +81,7 @@ body::-webkit-scrollbar {
 .custom-chips{
   height: 27px;
   border-radius: 13px;
+}
+.cursor-pointer{
+  cursor: pointer;
 }

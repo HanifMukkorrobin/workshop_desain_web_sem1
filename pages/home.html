@@ -68,72 +68,19 @@
           style="margin-left: 10vw; margin-right: 10vw; margin-top: 30vh"
         >
           <div class="font-32 jakarta-bold">Siaran Pers</div>
-          <div class="font-20 jakarta-bold">Lihat Semua</div>
+          <div class="font-20 jakarta-bold cursor-pointer" >Lihat Semua</div>
         </div>
         <div
           class="mt-4 overflow-x-auto hide-scrollbar"
-          style="padding-left: 10vw"
+          style="left: 10vw; position: absolute; width: 90vw;"
+          id="content-container"
         >
-          <div class="d-inline-flex align-items-center">
-            <div class="content-siaran me-3">
-              <div class="content-siaran-text py-4 px-3">
-                <div class="d-flex align-items-center">
-                  <div
-                    class="p-1 bg-white main-text-color rounded jakarta-semibold font-12"
-                  >
-                    Siaran Pers
-                  </div>
-                  <div class="text-white font-12 jakarta-semibold ms-3">
-                    13/10/2023
-                  </div>
-                </div>
-                <div class="mt-2 text-white font-16 jakarta-bold">
-                  Siaran Pers Tentang Menkominfo: Pemerintah Terus Berantas Judi
-                  Online
-                </div>
-              </div>
-            </div>
-            <div class="content-siaran me-3">
-              <div class="content-siaran-text py-4 px-3">
-                <div class="d-flex align-items-center">
-                  <div
-                    class="p-1 bg-white main-text-color rounded jakarta-semibold font-12"
-                  >
-                    Siaran Pers
-                  </div>
-                  <div class="text-white font-12 jakarta-semibold ms-3">
-                    13/10/2023
-                  </div>
-                </div>
-                <div class="mt-2 text-white font-16 jakarta-bold">
-                  Siaran Pers Tentang Menkominfo: Pemerintah Terus Berantas Judi
-                  Online
-                </div>
-              </div>
-            </div>
-            <div class="content-siaran me-3">
-              <div class="content-siaran-text py-4 px-3">
-                <div class="d-flex align-items-center">
-                  <div
-                    class="p-1 bg-white main-text-color rounded jakarta-semibold font-12"
-                  >
-                    Siaran Pers
-                  </div>
-                  <div class="text-white font-12 jakarta-semibold ms-3">
-                    13/10/2023
-                  </div>
-                </div>
-                <div class="mt-2 text-white font-16 jakarta-bold">
-                  Siaran Pers Tentang Menkominfo: Pemerintah Terus Berantas Judi
-                  Online
-                </div>
-              </div>
-            </div>
+          <div class="d-inline-flex align-items-center" id="content-siaran-id">
           </div>
         </div>
         <div
           class="d-flex justify-content-between mt-4"
-          style="padding-left: 10vw; padding-right: 10vw"
+          style="padding-left: 10vw; padding-right: 10vw; margin-top: 45vh !important;"
         >
           <div>
             <i class="fa-solid fa-circle fa-xs me-1" style="color: #025198"></i>
@@ -163,6 +110,7 @@
                 border-radius: 50%;
               "
               class="d-flex align-items-center justify-content-center"
+              onclick="prevSiaran()"
             >
               <i class="fa-solid fa-chevron-left" style="color: #ffffff"></i>
             </div>
@@ -174,6 +122,7 @@
                 border-radius: 50%;
               "
               class="d-flex align-items-center justify-content-center ms-2"
+              onclick="nextSiaran()"
             >
               <i class="fa-solid fa-chevron-right" style="color: #ffffff"></i>
             </div>
